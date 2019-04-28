@@ -2,7 +2,32 @@
 This package implements functions similar to the ones from the golang's official "strings" package, but for slices!
 
 
-### List of functions:
+## How to install
+Open your terminal and type:
+```
+go get github.com/merkur0/go-slices
+```
+Then, import this package with this code:
+```
+import (
+  "github.com/merkur0/go-slices"
+)
+```
+And that's it!
+
+## Usage:
+```
+slices.FunctionName(parameters)
+```  
+  
+Example:
+```
+mySlice := []int{1, 2, 3}
+slices.ContainsInt(mySlice, 3) // Returns "true"
+```
+
+
+## List of functions:
 
 ContainsByte
 
