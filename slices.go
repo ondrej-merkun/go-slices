@@ -20,7 +20,7 @@ func ContainsBool(slice []bool, n bool) bool {
 	return false
 }
 
-func ContainsInt(slice []int, n int) bool { // Checks array of ints for int
+func ContainsInt(slice []int, n int) bool {
 	for _, item := range slice {
 		if item == n {
 			return true
@@ -47,7 +47,7 @@ func ContainsFloat64(slice []float64, n float64) bool {
 	return false
 }
 
-func ContainsString(slice []string, n string) bool { // Checks array of strings for string
+func ContainsString(slice []string, n string) bool {
 	for _, item := range slice {
 		if item == n {
 			return true
