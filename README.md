@@ -1,5 +1,5 @@
 # go-slices
-This package implements functions similar to the ones from the "strings" package, but for slices!
+This package implements functions similar to the ones from the golang's official "strings" package, but for slices!
 
 
 ### List of functions:
