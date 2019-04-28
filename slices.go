@@ -2,8 +2,8 @@ package slices
 
 // FUNCTION "Contains" - check whether the provided slice contains the provided item
 
-func ContainsByte(slc []byte, n byte) bool {
-	for _, item := range slc {
+func ContainsByte(slice []byte, n byte) bool {
+	for _, item := range slice {
 		if item == n {
 			return true
 		}
@@ -11,8 +11,8 @@ func ContainsByte(slc []byte, n byte) bool {
 	return false
 }
 
-func ContainsBool(slc []bool, n bool) bool {
-	for _, item := range slc {
+func ContainsBool(slice []bool, n bool) bool {
+	for _, item := range slice {
 		if item == n {
 			return true
 		}
@@ -20,8 +20,8 @@ func ContainsBool(slc []bool, n bool) bool {
 	return false
 }
 
-func ContainsInt(slc []int, n int) bool { // Checks array of ints for int
-	for _, item := range slc {
+func ContainsInt(slice []int, n int) bool { // Checks array of ints for int
+	for _, item := range slice {
 		if item == n {
 			return true
 		}
@@ -29,8 +29,8 @@ func ContainsInt(slc []int, n int) bool { // Checks array of ints for int
 	return false
 }
 
-func ContainsFloat32(slc []float32, n float32) bool {
-	for _, item := range slc {
+func ContainsFloat32(slice []float32, n float32) bool {
+	for _, item := range slice {
 		if item == n {
 			return true
 		}
@@ -38,8 +38,8 @@ func ContainsFloat32(slc []float32, n float32) bool {
 	return false
 }
 
-func ContainsFloat64(slc []float64, n float64) bool {
-	for _, item := range slc {
+func ContainsFloat64(slice []float64, n float64) bool {
+	for _, item := range slice {
 		if item == n {
 			return true
 		}
@@ -47,9 +47,9 @@ func ContainsFloat64(slc []float64, n float64) bool {
 	return false
 }
 
-func ContainsString(slc []string, s string) bool { // Checks array of strings for string
-	for _, item := range slc {
-		if item == s {
+func ContainsString(slice []string, n string) bool { // Checks array of strings for string
+	for _, item := range slice {
+		if item == n {
 			return true
 		}
 	}
@@ -58,9 +58,9 @@ func ContainsString(slc []string, s string) bool { // Checks array of strings fo
 
 // FUNCTION "Count" - returns the number of instances of given item
 
-func CountByte(slc []byte, n byte) int {
+func CountByte(slice []byte, n byte) int {
 	instances := 0
-	for _, item := range slc {
+	for _, item := range slice {
 		if item == n {
 			instances++
 		}
@@ -68,9 +68,9 @@ func CountByte(slc []byte, n byte) int {
 	return instances
 }
 
-func CountBool(slc []bool, n bool) int {
+func CountBool(slice []bool, n bool) int {
 	instances := 0
-	for _, item := range slc {
+	for _, item := range slice {
 		if item == n {
 			instances++
 		}
@@ -78,9 +78,9 @@ func CountBool(slc []bool, n bool) int {
 	return instances
 }
 
-func CountInt(slc []int, n int) int {
+func CountInt(slice []int, n int) int {
 	instances := 0
-	for _, item := range slc {
+	for _, item := range slice {
 		if item == n {
 			instances++
 		}
@@ -88,9 +88,9 @@ func CountInt(slc []int, n int) int {
 	return instances
 }
 
-func CountFloat32(slc []float32, n float32) int {
+func CountFloat32(slice []float32, n float32) int {
 	instances := 0
-	for _, item := range slc {
+	for _, item := range slice {
 		if item == n {
 			instances++
 		}
@@ -98,9 +98,9 @@ func CountFloat32(slc []float32, n float32) int {
 	return instances
 }
 
-func CountFloat64(slc []float64, n float64) int {
+func CountFloat64(slice []float64, n float64) int {
 	instances := 0
-	for _, item := range slc {
+	for _, item := range slice {
 		if item == n {
 			instances++
 		}
@@ -108,9 +108,9 @@ func CountFloat64(slc []float64, n float64) int {
 	return instances
 }
 
-func CountString(slc []string, n string) int {
+func CountString(slice []string, n string) int {
 	instances := 0
-	for _, item := range slc {
+	for _, item := range slice {
 		if item == n {
 			instances++
 		}
@@ -120,30 +120,30 @@ func CountString(slc []string, n string) int {
 
 // FUNCTION "Delete" - delete an item with index within given slice and return the new slice
 
-func DeleteBool(slc []bool, i int) []bool { 
-	return append(slc[:i], slc[i+1:]...)
+func DeleteBool(slice []bool, i int) []bool { 
+	return append(slice[:i], slice[i+1:]...)
 }
 
-func DeleteInt(slc []int, i int) []int {
-	return append(slc[:i], slc[i+1:]...)
+func DeleteInt(slice []int, i int) []int {
+	return append(slice[:i], slice[i+1:]...)
 }
 
-func DeleteFloat32(slc []float32, i int) []float32 {
-	return append(slc[:i], slc[i+1:]...)
+func DeleteFloat32(slice []float32, i int) []float32 {
+	return append(slice[:i], slice[i+1:]...)
 }
 
-func DeleteFloat64(slc []float64, i int) []float64 {
-	return append(slc[:i], slc[i+1:]...)
+func DeleteFloat64(slice []float64, i int) []float64 {
+	return append(slice[:i], slice[i+1:]...)
 }
 
-func DeleteString(slc []string, i int) []string {
-	return append(slc[:i], slc[i+1:]...)
+func DeleteString(slice []string, i int) []string {
+	return append(slice[:i], slice[i+1:]...)
 }
 
 // FUNCTION "Index" - returns index of item within given slice
 
-func IndexByte(slc []byte, n byte) int {
-	for index, item := range slc {
+func IndexByte(slice []byte, n byte) int {
+	for index, item := range slice {
 		if item == n {
 			return index
 		}
@@ -151,8 +151,8 @@ func IndexByte(slc []byte, n byte) int {
 	return -1
 }
 
-func IndexBool(slc []bool, n bool) int {
-	for index, item := range slc {
+func IndexBool(slice []bool, n bool) int {
+	for index, item := range slice {
 		if item == n {
 			return index
 		}
@@ -160,8 +160,8 @@ func IndexBool(slc []bool, n bool) int {
 	return -1
 }
 
-func IndexInt(slc []int, n int) int {
-	for index, item := range slc {
+func IndexInt(slice []int, n int) int {
+	for index, item := range slice {
 		if item == n {
 			return index
 		}
@@ -169,8 +169,8 @@ func IndexInt(slc []int, n int) int {
 	return -1
 }
 
-func IndexFloat32(slc []float32, n float32) int {
-	for index, item := range slc {
+func IndexFloat32(slice []float32, n float32) int {
+	for index, item := range slice {
 		if item == n {
 			return index
 		}
@@ -178,8 +178,8 @@ func IndexFloat32(slc []float32, n float32) int {
 	return -1
 }
 
-func IndexFloat64(slc []float64, n float64) int {
-	for index, item := range slc {
+func IndexFloat64(slice []float64, n float64) int {
+	for index, item := range slice {
 		if item == n {
 			return index
 		}
@@ -187,8 +187,8 @@ func IndexFloat64(slc []float64, n float64) int {
 	return -1
 }
 
-func IndexString(slc []string, n string) int {
-	for index, item := range slc {
+func IndexString(slice []string, n string) int {
+	for index, item := range slice {
 		if item == n {
 			return index
 		}
@@ -198,9 +198,9 @@ func IndexString(slc []string, n string) int {
 
 // FUNCTION "LastIndex" - Returns the last index of item within given slice
 
-func LastIndexByte(slc []byte, n byte) int {
+func LastIndexByte(slice []byte, n byte) int {
 	lastIndex := -1
-	for index, item := range slc {
+	for index, item := range slice {
 		if item == n {
 			lastIndex = index
 		}
@@ -208,9 +208,9 @@ func LastIndexByte(slc []byte, n byte) int {
 	return lastIndex
 }
 
-func LastIndexBool(slc []bool, n bool) int {
+func LastIndexBool(slice []bool, n bool) int {
 	lastIndex := -1
-	for index, item := range slc {
+	for index, item := range slice {
 		if item == n {
 			lastIndex = index
 		}
@@ -218,9 +218,9 @@ func LastIndexBool(slc []bool, n bool) int {
 	return lastIndex
 }
 
-func LastIndexInt(slc []int, n int) int {
+func LastIndexInt(slice []int, n int) int {
 	lastIndex := -1
-	for index, item := range slc {
+	for index, item := range slice {
 		if item == n {
 			lastIndex = index
 		}
@@ -228,9 +228,9 @@ func LastIndexInt(slc []int, n int) int {
 	return lastIndex
 }
 
-func LastIndexFloat32(slc []float32, n float32) int {
+func LastIndexFloat32(slice []float32, n float32) int {
 	lastIndex := -1
-	for index, item := range slc {
+	for index, item := range slice {
 		if item == n {
 			lastIndex = index
 		}
@@ -238,9 +238,9 @@ func LastIndexFloat32(slc []float32, n float32) int {
 	return lastIndex
 }
 
-func LastIndexFloat64(slc []float64, n float64) int {
+func LastIndexFloat64(slice []float64, n float64) int {
 	lastIndex := -1
-	for index, item := range slc {
+	for index, item := range slice {
 		if item == n {
 			lastIndex = index
 		}
@@ -248,9 +248,9 @@ func LastIndexFloat64(slc []float64, n float64) int {
 	return lastIndex
 }
 
-func LastIndexString(slc []string, n string) int {
+func LastIndexString(slice []string, n string) int {
 	lastIndex := -1
-	for index, item := range slc {
+	for index, item := range slice {
 		if item == n {
 			lastIndex = index
 		}
@@ -260,118 +260,118 @@ func LastIndexString(slc []string, n string) int {
 
 // FUNCTION "Replace" - Replaces "old" items with "new" items and returns the new slice
 
-func ReplaceByte(slc []byte, old, new byte) []byte {
-	for index, item := range slc {
+func ReplaceByte(slice []byte, old, new byte) []byte {
+	for index, item := range slice {
 		if item == old {
-			slc[index] = new
-			return slc
+			slice[index] = new
+			return slice
 		}
 	}
-	return slc
+	return slice
 }
 
-func ReplaceBool(slc []bool, old, new bool) []bool {
-	for index, item := range slc {
+func ReplaceBool(slice []bool, old, new bool) []bool {
+	for index, item := range slice {
 		if item == old {
-			slc[index] = new
-			return slc
+			slice[index] = new
+			return slice
 		}
 	}
-	return slc
+	return slice
 }
 
-func ReplaceInt(slc []int, old, new int) []int {
-	for index, item := range slc {
+func ReplaceInt(slice []int, old, new int) []int {
+	for index, item := range slice {
 		if item == old {
-			slc[index] = new
-			return slc
+			slice[index] = new
+			return slice
 		}
 	}
-	return slc
+	return slice
 }
 
-func ReplaceFloat32(slc []float32, old, new float32) []float32 {
-	for index, item := range slc {
+func ReplaceFloat32(slice []float32, old, new float32) []float32 {
+	for index, item := range slice {
 		if item == old {
-			slc[index] = new
-			return slc
+			slice[index] = new
+			return slice
 		}
 	}
-	return slc
+	return slice
 }
 
-func ReplaceFloat64(slc []float64, old, new float64) []float64 {
-	for index, item := range slc {
+func ReplaceFloat64(slice []float64, old, new float64) []float64 {
+	for index, item := range slice {
 		if item == old {
-			slc[index] = new
-			return slc
+			slice[index] = new
+			return slice
 		}
 	}
-	return slc
+	return slice
 }
 
-func ReplaceString(slc []string, old, new string) []string {
-	for index, item := range slc {
+func ReplaceString(slice []string, old, new string) []string {
+	for index, item := range slice {
 		if item == old {
-			slc[index] = new
-			return slc
+			slice[index] = new
+			return slice
 		}
 	}
-	return slc
+	return slice
 }
 
 // FUNCTION "ReplaceAll" - replaces all occurences of "old" with "new" and returns the new slice
 
-func ReplaceAllByte(slc []byte, old, new byte) []byte {
-	for index, item := range slc {
+func ReplaceAllByte(slice []byte, old, new byte) []byte {
+	for index, item := range slice {
 		if item == old {
-			slc[index] = new
+			slice[index] = new
 		}
 	}
-	return slc
+	return slice
 }
 
-func ReplaceAllBool(slc []bool, old, new bool) []bool {
-	for index, item := range slc {
+func ReplaceAllBool(slice []bool, old, new bool) []bool {
+	for index, item := range slice {
 		if item == old {
-			slc[index] = new
+			slice[index] = new
 		}
 	}
-	return slc
+	return slice
 }
 
-func ReplaceAllInt(slc []int, old, new int) []int {
-	for index, item := range slc {
+func ReplaceAllInt(slice []int, old, new int) []int {
+	for index, item := range slice {
 		if item == old {
-			slc[index] = new
+			slice[index] = new
 		}
 	}
-	return slc
+	return slice
 }
 
-func ReplaceAllFloat32(slc []float32, old, new float32) []float32 {
-	for index, item := range slc {
+func ReplaceAllFloat32(slice []float32, old, new float32) []float32 {
+	for index, item := range slice {
 		if item == old {
-			slc[index] = new
+			slice[index] = new
 		}
 	}
-	return slc
+	return slice
 }
 
-func ReplaceAllFloat64(slc []float64, old, new float64) []float64 {
-	for index, item := range slc {
+func ReplaceAllFloat64(slice []float64, old, new float64) []float64 {
+	for index, item := range slice {
 		if item == old {
-			slc[index] = new
+			slice[index] = new
 		}
 	}
-	return slc
+	return slice
 }
 
-func ReplaceAllString(slc []string, old, new string) []string {
-	for index, item := range slc {
+func ReplaceAllString(slice []string, old, new string) []string {
+	for index, item := range slice {
 		if item == old {
-			slc[index] = new
+			slice[index] = new
 		}
 	}
-	return slc
+	return slice
 }
