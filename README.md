@@ -29,7 +29,7 @@ slices.ContainsInt(mySlice, 3) // Returns "true"
 
 ## List of functions:
 
-#### Contains
+### Contains
 Returns true if the slice (first parameter) contains the item (second parameter). Otherwise returns false.
 Example:
 ```
@@ -76,7 +76,7 @@ ContainsComplex128
 
 ---
 
-#### Count
+### Count
 Returns the number of instances of the item (second parameter) within the slice (first parameter).
 Example:
 ```
@@ -123,7 +123,7 @@ CountComplex128
 
 ---
 
-#### Delete
+### Delete
 Deletes an item with the index (second parameter) within the slice (first parameter) and returns the new slice.
 Example:
 ```
@@ -169,7 +169,7 @@ DeleteComplex128
 
 ---
 
-#### Index
+### Index
 Returns the index of the first occurence of the item (second parameter) within the slice (first parameter).
 Example:
 ```
@@ -215,7 +215,7 @@ IndexComplex128
 
 ---
 
-#### LastIndex
+### LastIndex
 Returns the index of the last occurence of the item (second parameter) within the slice (first parameter).
 Example:
 ```
@@ -261,7 +261,7 @@ LastIndexComplex128
 
 ---
 
-#### Replace
+### Replace
 Replaces the first instance of the old item (second parameter) within the slice (first parameter) with the new item (third parameter) and returns the new slice.
 Example:
 ```
@@ -307,7 +307,7 @@ ReplaceComplex128
 
 ---
 
-#### ReplaceAll
+### ReplaceAll
 Replaces every instance of the old item (second parameter) within the slice (first parameter) with the new item (third parameter) and returns the new slice.
 Example:
 ```
