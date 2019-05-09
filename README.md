@@ -1,5 +1,5 @@
 # go-slices
-This package implements functions similar to the ones from the golang's official "strings" package, but for slices!
+Unlike many other programming lanugages, Go doesn't provide helper functions for slices in it's core. I felt like this was quite an essential feature and there weren't any libraries out there that would do this, so I made my own. The functions are the same as the in the Go's official "strings" package, but you can use them on slices.
 
 
 ## How to install
