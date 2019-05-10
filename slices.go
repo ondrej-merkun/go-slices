@@ -42,30 +42,36 @@ func LastIndexByte(slice []byte, n byte) int {
 	return lastIndex
 }
 
-func ReplaceByte(slice []byte, old, new byte) []byte {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapByte(slice []byte, f func(byte) byte) []byte {
+	var newSlice []byte
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceByte(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapByte(slice []byte, f func(byte) byte) []byte {
-	for _, item := range slice {
-		ReplaceByte(slice, item, f(item))
+func ReplaceByte(slice []byte, old, new byte) []byte {
+	var newSlice []byte
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllByte(slice []byte, old, new byte) []byte {
-	for index, item := range slice {
+	var newSlice []byte
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsBool(slice []bool, n bool) bool {
@@ -110,30 +116,36 @@ func LastIndexBool(slice []bool, n bool) int {
 	return lastIndex
 }
 
-func ReplaceBool(slice []bool, old, new bool) []bool {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapBool(slice []bool, f func(bool) bool) []bool {
+	var newSlice []bool
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceBool(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapBool(slice []bool, f func(bool) bool) []bool {
-	for _, item := range slice {
-		ReplaceBool(slice, item, f(item))
+func ReplaceBool(slice []bool, old, new bool) []bool {
+	var newSlice []bool
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllBool(slice []bool, old, new bool) []bool {
-	for index, item := range slice {
+	var newSlice []bool
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsInt(slice []int, n int) bool {
@@ -178,30 +190,36 @@ func LastIndexInt(slice []int, n int) int {
 	return lastIndex
 }
 
-func ReplaceInt(slice []int, old, new int) []int {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapInt(slice []int, f func(int) int) []int {
+	var newSlice []int
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceInt(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapInt(slice []int, f func(int) int) []int {
-	for _, item := range slice {
-		ReplaceInt(slice, item, f(item))
+func ReplaceInt(slice []int, old, new int) []int {
+	var newSlice []int
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllInt(slice []int, old, new int) []int {
-	for index, item := range slice {
+	var newSlice []int
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsInt8(slice []int8, n int8) bool {
@@ -246,30 +264,36 @@ func LastIndexInt8(slice []int8, n int8) int {
 	return lastIndex
 }
 
-func ReplaceInt8(slice []int8, old, new int8) []int8 {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapInt8(slice []int8, f func(int8) int8) []int8 {
+	var newSlice []int8
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceInt8(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapInt8(slice []int8, f func(int8) int8) []int8 {
-	for _, item := range slice {
-		ReplaceInt8(slice, item, f(item))
+func ReplaceInt8(slice []int8, old, new int8) []int8 {
+	var newSlice []int8
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllInt8(slice []int8, old, new int8) []int8 {
-	for index, item := range slice {
+	var newSlice []int8
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsInt16(slice []int16, n int16) bool {
@@ -314,30 +338,36 @@ func LastIndexInt16(slice []int16, n int16) int {
 	return lastIndex
 }
 
-func ReplaceInt16(slice []int16, old, new int16) []int16 {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapInt16(slice []int16, f func(int16) int16) []int16 {
+	var newSlice []int16
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceInt16(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapInt16(slice []int16, f func(int16) int16) []int16 {
-	for _, item := range slice {
-		ReplaceInt16(slice, item, f(item))
+func ReplaceInt16(slice []int16, old, new int16) []int16 {
+	var newSlice []int16
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllInt16(slice []int16, old, new int16) []int16 {
-	for index, item := range slice {
+	var newSlice []int16
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsInt32(slice []int32, n int32) bool {
@@ -382,30 +412,36 @@ func LastIndexInt32(slice []int32, n int32) int {
 	return lastIndex
 }
 
-func ReplaceInt32(slice []int32, old, new int32) []int32 {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapInt32(slice []int32, f func(int32) int32) []int32 {
+	var newSlice []int32
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceInt32(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapInt32(slice []int32, f func(int32) int32) []int32 {
-	for _, item := range slice {
-		ReplaceInt32(slice, item, f(item))
+func ReplaceInt32(slice []int32, old, new int32) []int32 {
+	var newSlice []int32
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllInt32(slice []int32, old, new int32) []int32 {
-	for index, item := range slice {
+	var newSlice []int32
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsInt64(slice []int64, n int64) bool {
@@ -450,30 +486,36 @@ func LastIndexInt64(slice []int64, n int64) int {
 	return lastIndex
 }
 
-func ReplaceInt64(slice []int64, old, new int64) []int64 {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapInt64(slice []int64, f func(int64) int64) []int64 {
+	var newSlice []int64
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceInt64(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapInt64(slice []int64, f func(int64) int64) []int64 {
-	for _, item := range slice {
-		ReplaceInt64(slice, item, f(item))
+func ReplaceInt64(slice []int64, old, new int64) []int64 {
+	var newSlice []int64
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllInt64(slice []int64, old, new int64) []int64 {
-	for index, item := range slice {
+	var newSlice []int64
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsFloat32(slice []float32, n float32) bool {
@@ -518,30 +560,36 @@ func LastIndexFloat32(slice []float32, n float32) int {
 	return lastIndex
 }
 
-func ReplaceFloat32(slice []float32, old, new float32) []float32 {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapFloat32(slice []float32, f func(float32) float32) []float32 {
+	var newSlice []float32
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceFloat32(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapFloat32(slice []float32, f func(float32) float32) []float32 {
-	for _, item := range slice {
-		ReplaceFloat32(slice, item, f(item))
+func ReplaceFloat32(slice []float32, old, new float32) []float32 {
+	var newSlice []float32
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllFloat32(slice []float32, old, new float32) []float32 {
-	for index, item := range slice {
+	var newSlice []float32
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsFloat64(slice []float64, n float64) bool {
@@ -586,30 +634,36 @@ func LastIndexFloat64(slice []float64, n float64) int {
 	return lastIndex
 }
 
-func ReplaceFloat64(slice []float64, old, new float64) []float64 {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapFloat64(slice []float64, f func(float64) float64) []float64 {
+	var newSlice []float64
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceFloat64(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapFloat64(slice []float64, f func(float64) float64) []float64 {
-	for _, item := range slice {
-		ReplaceFloat64(slice, item, f(item))
+func ReplaceFloat64(slice []float64, old, new float64) []float64 {
+	var newSlice []float64
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllFloat64(slice []float64, old, new float64) []float64 {
-	for index, item := range slice {
+	var newSlice []float64
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsString(slice []string, n string) bool {
@@ -654,30 +708,36 @@ func LastIndexString(slice []string, n string) int {
 	return lastIndex
 }
 
-func ReplaceString(slice []string, old, new string) []string {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapString(slice []string, f func(string) string) []string {
+	var newSlice []string
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceString(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapString(slice []string, f func(string) string) []string {
-	for _, item := range slice {
-		ReplaceString(slice, item, f(item))
+func ReplaceString(slice []string, old, new string) []string {
+	var newSlice []string
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllString(slice []string, old, new string) []string {
-	for index, item := range slice {
+	var newSlice []string
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsUint(slice []uint, n uint) bool {
@@ -722,30 +782,36 @@ func LastIndexUint(slice []uint, n uint) int {
 	return lastIndex
 }
 
-func ReplaceUint(slice []uint, old, new uint) []uint {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapUint(slice []uint, f func(uint) uint) []uint {
+	var newSlice []uint
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceUint(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapUint(slice []uint, f func(uint) uint) []uint {
-	for _, item := range slice {
-		ReplaceUint(slice, item, f(item))
+func ReplaceUint(slice []uint, old, new uint) []uint {
+	var newSlice []uint
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllUint(slice []uint, old, new uint) []uint {
-	for index, item := range slice {
+	var newSlice []uint
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsUint8(slice []uint8, n uint8) bool {
@@ -790,30 +856,36 @@ func LastIndexUint8(slice []uint8, n uint8) int {
 	return lastIndex
 }
 
-func ReplaceUint8(slice []uint8, old, new uint8) []uint8 {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapUint8(slice []uint8, f func(uint8) uint8) []uint8 {
+	var newSlice []uint8
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceUint8(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapUint8(slice []uint8, f func(uint8) uint8) []uint8 {
-	for _, item := range slice {
-		ReplaceUint8(slice, item, f(item))
+func ReplaceUint8(slice []uint8, old, new uint8) []uint8 {
+	var newSlice []uint8
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllUint8(slice []uint8, old, new uint8) []uint8 {
-	for index, item := range slice {
+	var newSlice []uint8
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsUint16(slice []uint16, n uint16) bool {
@@ -858,30 +930,36 @@ func LastIndexUint16(slice []uint16, n uint16) int {
 	return lastIndex
 }
 
-func ReplaceUint16(slice []uint16, old, new uint16) []uint16 {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapUint16(slice []uint16, f func(uint16) uint16) []uint16 {
+	var newSlice []uint16
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceUint16(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapUint16(slice []uint16, f func(uint16) uint16) []uint16 {
-	for _, item := range slice {
-		ReplaceUint16(slice, item, f(item))
+func ReplaceUint16(slice []uint16, old, new uint16) []uint16 {
+	var newSlice []uint16
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllUint16(slice []uint16, old, new uint16) []uint16 {
-	for index, item := range slice {
+	var newSlice []uint16
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsUint32(slice []uint32, n uint32) bool {
@@ -926,30 +1004,36 @@ func LastIndexUint32(slice []uint32, n uint32) int {
 	return lastIndex
 }
 
-func ReplaceUint32(slice []uint32, old, new uint32) []uint32 {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapUint32(slice []uint32, f func(uint32) uint32) []uint32 {
+	var newSlice []uint32
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceUint32(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapUint32(slice []uint32, f func(uint32) uint32) []uint32 {
-	for _, item := range slice {
-		ReplaceUint32(slice, item, f(item))
+func ReplaceUint32(slice []uint32, old, new uint32) []uint32 {
+	var newSlice []uint32
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllUint32(slice []uint32, old, new uint32) []uint32 {
-	for index, item := range slice {
+	var newSlice []uint32
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsUint64(slice []uint64, n uint64) bool {
@@ -994,30 +1078,36 @@ func LastIndexUint64(slice []uint64, n uint64) int {
 	return lastIndex
 }
 
-func ReplaceUint64(slice []uint64, old, new uint64) []uint64 {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapUint64(slice []uint64, f func(uint64) uint64) []uint64 {
+	var newSlice []uint64
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceUint64(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapUint64(slice []uint64, f func(uint64) uint64) []uint64 {
-	for _, item := range slice {
-		ReplaceUint64(slice, item, f(item))
+func ReplaceUint64(slice []uint64, old, new uint64) []uint64 {
+	var newSlice []uint64
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllUint64(slice []uint64, old, new uint64) []uint64 {
-	for index, item := range slice {
+	var newSlice []uint64
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsUintptr(slice []uintptr, n uintptr) bool {
@@ -1062,30 +1152,36 @@ func LastIndexUintptr(slice []uintptr, n uintptr) int {
 	return lastIndex
 }
 
-func ReplaceUintptr(slice []uintptr, old, new uintptr) []uintptr {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapUintptr(slice []uintptr, f func(uintptr) uintptr) []uintptr {
+	var newSlice []uintptr
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceUintptr(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapUintptr(slice []uintptr, f func(uintptr) uintptr) []uintptr {
-	for _, item := range slice {
-		ReplaceUintptr(slice, item, f(item))
+func ReplaceUintptr(slice []uintptr, old, new uintptr) []uintptr {
+	var newSlice []uintptr
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllUintptr(slice []uintptr, old, new uintptr) []uintptr {
-	for index, item := range slice {
+	var newSlice []uintptr
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsComplex64(slice []complex64, n complex64) bool {
@@ -1130,30 +1226,36 @@ func LastIndexComplex64(slice []complex64, n complex64) int {
 	return lastIndex
 }
 
-func ReplaceComplex64(slice []complex64, old, new complex64) []complex64 {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapComplex64(slice []complex64, f func(complex64) complex64) []complex64 {
+	var newSlice []complex64
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceComplex64(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapComplex64(slice []complex64, f func(complex64) complex64) []complex64 {
-	for _, item := range slice {
-		ReplaceComplex64(slice, item, f(item))
+func ReplaceComplex64(slice []complex64, old, new complex64) []complex64 {
+	var newSlice []complex64
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllComplex64(slice []complex64, old, new complex64) []complex64 {
-	for index, item := range slice {
+	var newSlice []complex64
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
 
 func ContainsComplex128(slice []complex128, n complex128) bool {
@@ -1198,28 +1300,34 @@ func LastIndexComplex128(slice []complex128, n complex128) int {
 	return lastIndex
 }
 
-func ReplaceComplex128(slice []complex128, old, new complex128) []complex128 {
-	for index, item := range slice {
-		if item == old {
-			slice[index] = new
-			return slice
-		}
+func MapComplex128(slice []complex128, f func(complex128) complex128) []complex128 {
+	var newSlice []complex128
+	copy(newSlice, slice)
+	for _, item := range newSlice {
+		ReplaceComplex128(newSlice, item, f(item))
 	}
-	return slice
+	return newSlice
 }
 
-func MapComplex128(slice []complex128, f func(complex128) complex128) []complex128 {
-	for _, item := range slice {
-		ReplaceComplex128(slice, item, f(item))
+func ReplaceComplex128(slice []complex128, old, new complex128) []complex128 {
+	var newSlice []complex128
+	copy(newSlice, slice)
+	for index, item := range newSlice {
+		if item == old {
+			newSlice[index] = new
+			return newSlice
+		}
 	}
-	return slice
+	return newSlice
 }
 
 func ReplaceAllComplex128(slice []complex128, old, new complex128) []complex128 {
-	for index, item := range slice {
+	var newSlice []complex128
+	copy(newSlice, slice)
+	for index, item := range newSlice {
 		if item == old {
-			slice[index] = new
+			newSlice[index] = new
 		}
 	}
-	return slice
+	return newSlice
 }
