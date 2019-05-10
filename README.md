@@ -10,7 +10,7 @@ Open your terminal and type:
 ```
 go get github.com/merkur0/go-slices
 ```
-Then, import this package with in your .go file like this:
+Then, import this package in your .go file like this:
 ```
 import (
   "github.com/merkur0/go-slices"
