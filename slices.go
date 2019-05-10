@@ -51,6 +51,10 @@ func MapByte(slice []byte, f func(byte) byte) []byte {
 	return newSlice
 }
 
+func PopByte(slice []byte) []byte {
+	return slice[:(len(slice) - 1)]
+}
+
 func ReplaceByte(slice []byte, old, new byte) []byte {
 	var newSlice []byte
 	copy(newSlice, slice)
@@ -123,6 +127,10 @@ func MapBool(slice []bool, f func(bool) bool) []bool {
 		ReplaceBool(newSlice, item, f(item))
 	}
 	return newSlice
+}
+
+func PopBool(slice []bool) []bool {
+	return slice[:(len(slice) - 1)]
 }
 
 func ReplaceBool(slice []bool, old, new bool) []bool {
@@ -199,6 +207,10 @@ func MapInt(slice []int, f func(int) int) []int {
 	return newSlice
 }
 
+func PopInt(slice []int) []int {
+	return slice[:(len(slice) - 1)]
+}
+
 func ReplaceInt(slice []int, old, new int) []int {
 	var newSlice []int
 	copy(newSlice, slice)
@@ -271,6 +283,10 @@ func MapInt8(slice []int8, f func(int8) int8) []int8 {
 		ReplaceInt8(newSlice, item, f(item))
 	}
 	return newSlice
+}
+
+func PopInt8(slice []int8) []int8 {
+	return slice[:(len(slice) - 1)]
 }
 
 func ReplaceInt8(slice []int8, old, new int8) []int8 {
@@ -347,6 +363,10 @@ func MapInt16(slice []int16, f func(int16) int16) []int16 {
 	return newSlice
 }
 
+func PopInt16(slice []int16) []int16 {
+	return slice[:(len(slice) - 1)]
+}
+
 func ReplaceInt16(slice []int16, old, new int16) []int16 {
 	var newSlice []int16
 	copy(newSlice, slice)
@@ -419,6 +439,10 @@ func MapInt32(slice []int32, f func(int32) int32) []int32 {
 		ReplaceInt32(newSlice, item, f(item))
 	}
 	return newSlice
+}
+
+func PopInt32(slice []int32) []int32 {
+	return slice[:(len(slice) - 1)]
 }
 
 func ReplaceInt32(slice []int32, old, new int32) []int32 {
@@ -495,6 +519,10 @@ func MapInt64(slice []int64, f func(int64) int64) []int64 {
 	return newSlice
 }
 
+func PopInt64(slice []int64) []int64 {
+	return slice[:(len(slice) - 1)]
+}
+
 func ReplaceInt64(slice []int64, old, new int64) []int64 {
 	var newSlice []int64
 	copy(newSlice, slice)
@@ -567,6 +595,10 @@ func MapFloat32(slice []float32, f func(float32) float32) []float32 {
 		ReplaceFloat32(newSlice, item, f(item))
 	}
 	return newSlice
+}
+
+func PopFloat32(slice []float32) []float32 {
+	return slice[:(len(slice) - 1)]
 }
 
 func ReplaceFloat32(slice []float32, old, new float32) []float32 {
@@ -643,6 +675,10 @@ func MapFloat64(slice []float64, f func(float64) float64) []float64 {
 	return newSlice
 }
 
+func PopFloat64(slice []float64) []float64 {
+	return slice[:(len(slice) - 1)]
+}
+
 func ReplaceFloat64(slice []float64, old, new float64) []float64 {
 	var newSlice []float64
 	copy(newSlice, slice)
@@ -715,6 +751,10 @@ func MapString(slice []string, f func(string) string) []string {
 		ReplaceString(newSlice, item, f(item))
 	}
 	return newSlice
+}
+
+func PopString(slice []string) []string {
+	return slice[:(len(slice) - 1)]
 }
 
 func ReplaceString(slice []string, old, new string) []string {
@@ -791,6 +831,10 @@ func MapUint(slice []uint, f func(uint) uint) []uint {
 	return newSlice
 }
 
+func PopUint(slice []uint) []uint {
+	return slice[:(len(slice) - 1)]
+}
+
 func ReplaceUint(slice []uint, old, new uint) []uint {
 	var newSlice []uint
 	copy(newSlice, slice)
@@ -863,6 +907,10 @@ func MapUint8(slice []uint8, f func(uint8) uint8) []uint8 {
 		ReplaceUint8(newSlice, item, f(item))
 	}
 	return newSlice
+}
+
+func PopUint8(slice []uint8) []uint8 {
+	return slice[:(len(slice) - 1)]
 }
 
 func ReplaceUint8(slice []uint8, old, new uint8) []uint8 {
@@ -939,6 +987,10 @@ func MapUint16(slice []uint16, f func(uint16) uint16) []uint16 {
 	return newSlice
 }
 
+func PopUint16(slice []uint16) []uint16 {
+	return slice[:(len(slice) - 1)]
+}
+
 func ReplaceUint16(slice []uint16, old, new uint16) []uint16 {
 	var newSlice []uint16
 	copy(newSlice, slice)
@@ -1011,6 +1063,10 @@ func MapUint32(slice []uint32, f func(uint32) uint32) []uint32 {
 		ReplaceUint32(newSlice, item, f(item))
 	}
 	return newSlice
+}
+
+func PopUint32(slice []uint32) []uint32 {
+	return slice[:(len(slice) - 1)]
 }
 
 func ReplaceUint32(slice []uint32, old, new uint32) []uint32 {
@@ -1087,6 +1143,10 @@ func MapUint64(slice []uint64, f func(uint64) uint64) []uint64 {
 	return newSlice
 }
 
+func PopUint64(slice []uint64) []uint64 {
+	return slice[:(len(slice) - 1)]
+}
+
 func ReplaceUint64(slice []uint64, old, new uint64) []uint64 {
 	var newSlice []uint64
 	copy(newSlice, slice)
@@ -1159,6 +1219,10 @@ func MapUintptr(slice []uintptr, f func(uintptr) uintptr) []uintptr {
 		ReplaceUintptr(newSlice, item, f(item))
 	}
 	return newSlice
+}
+
+func PopUintptr(slice []uintptr) []uintptr {
+	return slice[:(len(slice) - 1)]
 }
 
 func ReplaceUintptr(slice []uintptr, old, new uintptr) []uintptr {
@@ -1235,6 +1299,10 @@ func MapComplex64(slice []complex64, f func(complex64) complex64) []complex64 {
 	return newSlice
 }
 
+func PopComplex64(slice []complex64) []complex64 {
+	return slice[:(len(slice) - 1)]
+}
+
 func ReplaceComplex64(slice []complex64, old, new complex64) []complex64 {
 	var newSlice []complex64
 	copy(newSlice, slice)
@@ -1307,6 +1375,10 @@ func MapComplex128(slice []complex128, f func(complex128) complex128) []complex1
 		ReplaceComplex128(newSlice, item, f(item))
 	}
 	return newSlice
+}
+
+func PopComplex128(slice []complex128) []complex128 {
+	return slice[:(len(slice) - 1)]
 }
 
 func ReplaceComplex128(slice []complex128, old, new complex128) []complex128 {

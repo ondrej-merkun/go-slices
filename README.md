@@ -98,6 +98,16 @@ slices.MapInt(mySlice, myFunc) // returns [2, 4, 6, 8]
 
 ---
 
+### Pop
+Returns a copy of the slice with it's last item removed.
+Example:
+```
+mySlice := []int{1, 2, 3, 4}
+slices.PopInt(mySlice) // returns [1, 2, 3]
+```
+
+---
+
 ### Replace
 Returns a copy of the slice where the first instance of the old item (second parameter) is replaced with the new item (third parameter).
 Example:
