@@ -84,6 +84,20 @@ slices.LastIndexInt(mySlice, 1) // returns 3
 
 ---
 
+### Map
+Returns a copy of the slice with all its items modified according to the mapping function.
+Example:
+```
+myFunc := func(number int) int {
+    return number * 2
+}
+mySlice := []int{1, 2, 3, 4}
+
+slices.MapInt(mySlice, myFunc) // returns [2, 4, 6, 8]
+```
+
+---
+
 ### Replace
 Returns a copy of the slice where the first instance of the old item (second parameter) is replaced with the new item (third parameter).
 Example:
