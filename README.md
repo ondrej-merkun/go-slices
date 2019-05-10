@@ -125,3 +125,16 @@ Example:
 mySlice := []int{1, 1, 3, 5, 1}
 slices.ReplaceAllInt(mySlice, 1, 0) // returns [0, 0, 3, 5, 1]
 ```
+
+---
+
+
+### Shift
+Returns a copy of the slice with it's first item removed.
+Example:
+```
+mySlice := []int{1, 2, 3}
+slices.ShiftInt(mySlice) // returns [2, 3]
+```
+
+---

@@ -78,6 +78,10 @@ func ReplaceAllByte(slice []byte, old, new byte) []byte {
 	return newSlice
 }
 
+func ShiftByte(slice []byte) []byte {
+	return slice[1:]
+}
+
 func ContainsBool(slice []bool, n bool) bool {
 	for _, item := range slice {
 		if item == n {
@@ -154,6 +158,10 @@ func ReplaceAllBool(slice []bool, old, new bool) []bool {
 		}
 	}
 	return newSlice
+}
+
+func ShiftBool(slice []bool) []bool {
+	return slice[1:]
 }
 
 func ContainsInt(slice []int, n int) bool {
@@ -234,6 +242,10 @@ func ReplaceAllInt(slice []int, old, new int) []int {
 	return newSlice
 }
 
+func ShiftInt(slice []int) []int {
+	return slice[1:]
+}
+
 func ContainsInt8(slice []int8, n int8) bool {
 	for _, item := range slice {
 		if item == n {
@@ -310,6 +322,10 @@ func ReplaceAllInt8(slice []int8, old, new int8) []int8 {
 		}
 	}
 	return newSlice
+}
+
+func ShiftInt8(slice []int8) []int8 {
+	return slice[1:]
 }
 
 func ContainsInt16(slice []int16, n int16) bool {
@@ -390,6 +406,10 @@ func ReplaceAllInt16(slice []int16, old, new int16) []int16 {
 	return newSlice
 }
 
+func ShiftInt16(slice []int16) []int16 {
+	return slice[1:]
+}
+
 func ContainsInt32(slice []int32, n int32) bool {
 	for _, item := range slice {
 		if item == n {
@@ -466,6 +486,10 @@ func ReplaceAllInt32(slice []int32, old, new int32) []int32 {
 		}
 	}
 	return newSlice
+}
+
+func ShiftInt32(slice []int32) []int32 {
+	return slice[1:]
 }
 
 func ContainsInt64(slice []int64, n int64) bool {
@@ -546,6 +570,10 @@ func ReplaceAllInt64(slice []int64, old, new int64) []int64 {
 	return newSlice
 }
 
+func ShiftInt64(slice []int64) []int64 {
+	return slice[1:]
+}
+
 func ContainsFloat32(slice []float32, n float32) bool {
 	for _, item := range slice {
 		if item == n {
@@ -622,6 +650,10 @@ func ReplaceAllFloat32(slice []float32, old, new float32) []float32 {
 		}
 	}
 	return newSlice
+}
+
+func ShiftFloat32(slice []float32) []float32 {
+	return slice[1:]
 }
 
 func ContainsFloat64(slice []float64, n float64) bool {
@@ -702,6 +734,10 @@ func ReplaceAllFloat64(slice []float64, old, new float64) []float64 {
 	return newSlice
 }
 
+func ShiftFloat64(slice []float64) []float64 {
+	return slice[1:]
+}
+
 func ContainsString(slice []string, n string) bool {
 	for _, item := range slice {
 		if item == n {
@@ -778,6 +814,10 @@ func ReplaceAllString(slice []string, old, new string) []string {
 		}
 	}
 	return newSlice
+}
+
+func ShiftString(slice []string) []string {
+	return slice[1:]
 }
 
 func ContainsUint(slice []uint, n uint) bool {
@@ -858,6 +898,10 @@ func ReplaceAllUint(slice []uint, old, new uint) []uint {
 	return newSlice
 }
 
+func ShiftUint(slice []uint) []uint {
+	return slice[1:]
+}
+
 func ContainsUint8(slice []uint8, n uint8) bool {
 	for _, item := range slice {
 		if item == n {
@@ -934,6 +978,10 @@ func ReplaceAllUint8(slice []uint8, old, new uint8) []uint8 {
 		}
 	}
 	return newSlice
+}
+
+func ShiftUint8(slice []uint8) []uint8 {
+	return slice[1:]
 }
 
 func ContainsUint16(slice []uint16, n uint16) bool {
@@ -1014,6 +1062,10 @@ func ReplaceAllUint16(slice []uint16, old, new uint16) []uint16 {
 	return newSlice
 }
 
+func ShiftUint16(slice []uint16) []uint16 {
+	return slice[1:]
+}
+
 func ContainsUint32(slice []uint32, n uint32) bool {
 	for _, item := range slice {
 		if item == n {
@@ -1090,6 +1142,10 @@ func ReplaceAllUint32(slice []uint32, old, new uint32) []uint32 {
 		}
 	}
 	return newSlice
+}
+
+func ShiftUint32(slice []uint32) []uint32 {
+	return slice[1:]
 }
 
 func ContainsUint64(slice []uint64, n uint64) bool {
@@ -1170,6 +1226,10 @@ func ReplaceAllUint64(slice []uint64, old, new uint64) []uint64 {
 	return newSlice
 }
 
+func ShiftUint64(slice []uint64) []uint64 {
+	return slice[1:]
+}
+
 func ContainsUintptr(slice []uintptr, n uintptr) bool {
 	for _, item := range slice {
 		if item == n {
@@ -1246,6 +1306,10 @@ func ReplaceAllUintptr(slice []uintptr, old, new uintptr) []uintptr {
 		}
 	}
 	return newSlice
+}
+
+func ShiftUintptr(slice []uintptr) []uintptr {
+	return slice[1:]
 }
 
 func ContainsComplex64(slice []complex64, n complex64) bool {
@@ -1326,6 +1390,10 @@ func ReplaceAllComplex64(slice []complex64, old, new complex64) []complex64 {
 	return newSlice
 }
 
+func ShiftComplex64(slice []complex64) []complex64 {
+	return slice[1:]
+}
+
 func ContainsComplex128(slice []complex128, n complex128) bool {
 	for _, item := range slice {
 		if item == n {
@@ -1402,4 +1470,8 @@ func ReplaceAllComplex128(slice []complex128, old, new complex128) []complex128 
 		}
 	}
 	return newSlice
+}
+
+func ShiftComplex128(slice []complex128) []complex128 {
+	return slice[1:]
 }
