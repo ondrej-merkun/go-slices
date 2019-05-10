@@ -1,5 +1,8 @@
-# go-slices
-This package implements functions similar to the ones from the golang's official "strings" package, but for slices!
+# go-slices 
+[![Go Report Card](https://goreportcard.com/badge/github.com/merkur0/go-slices)](https://goreportcard.com/report/github.com/merkur0/go-slices)
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20library%20that%20makes%20your%20life%20easier%20when%20working%20with%20slices%20in%20Go!&url=https://github.com/merkur0/go-slices)
+
+Unlike many other programming lanugages, Go doesn't provide helper functions for slices in it's core. I felt like this was quite an essential feature and there weren't any libraries out there that would do this, so I made my own. The functions are the same as the in the Go's official "strings" package, but you can use them on slices.
 
 
 ## How to install
@@ -7,7 +10,7 @@ Open your terminal and type:
 ```
 go get github.com/merkur0/go-slices
 ```
-Then, import this package with this code:
+Then, import this package in your .go file like this:
 ```
 import (
   "github.com/merkur0/go-slices"
@@ -29,7 +32,7 @@ slices.ContainsInt(mySlice, 3) // Returns "true"
 
 ## List of functions:
 
-#### Contains
+### Contains
 Returns true if the slice (first parameter) contains the item (second parameter). Otherwise returns false.
 Example:
 ```
@@ -44,15 +47,39 @@ ContainsBool
 
 ContainsInt
 
+ContainsInt8
+
+ContainsInt16
+
+ContainsInt32
+
+ContainsInt64
+
+ContainsUint
+
+ContainsUint8
+
+ContainsUint16
+
+ContainsUint32
+
+ContainsUint64
+
+ContainsUintptr
+
 ContainsFloat32
 
 ContainsFloat64
 
 ContainsString
 
+ContainsComplex64
+
+ContainsComplex128
+
 ---
 
-#### Count
+### Count
 Returns the number of instances of the item (second parameter) within the slice (first parameter).
 Example:
 ```
@@ -67,15 +94,39 @@ CountBool
 
 CountInt
 
+CountInt8
+
+CountInt16
+
+CountInt32
+
+CountInt64
+
+CountUint
+
+CountUint8
+
+CountUint16
+
+CountUint32
+
+CountUint64
+
+CountUintptr
+
 CountFloat32
 
 CountFloat64
 
 CountString
 
+CountComplex64
+
+CountComplex128
+
 ---
 
-#### Delete
+### Delete
 Deletes an item with the index (second parameter) within the slice (first parameter) and returns the new slice.
 Example:
 ```
@@ -83,9 +134,31 @@ mySlice := []int{1, 2, 3, 4, 5}
 slices.DeleteInt(mySlice, 0) // returns [2, 3, 4, 5]
 ```
 
+DeleteByte
+
 DeleteBool
 
 DeleteInt
+
+DeleteInt8
+
+DeleteInt16
+
+DeleteInt32
+
+DeleteInt64
+
+DeleteUint
+
+DeleteUint8
+
+DeleteUint16
+
+DeleteUint32
+
+DeleteUint64
+
+DeleteUintptr
 
 DeleteFloat32
 
@@ -93,9 +166,13 @@ DeleteFloat64
 
 DeleteString
 
+DeleteComplex64
+
+DeleteComplex128
+
 ---
 
-#### Index
+### Index
 Returns the index of the first occurence of the item (second parameter) within the slice (first parameter).
 Example:
 ```
@@ -109,15 +186,39 @@ IndexBool
 
 IndexInt
 
+IndexInt8
+
+IndexInt16
+
+IndexInt32
+
+IndexInt64
+
+IndexUint
+
+IndexUint8
+
+IndexUint16
+
+IndexUint32
+
+IndexUint64
+
+IndexUintptr
+
 IndexFloat32
 
 IndexFloat64
 
 IndexString
 
+IndexComplex64
+
+IndexComplex128
+
 ---
 
-#### LastIndex
+### LastIndex
 Returns the index of the last occurence of the item (second parameter) within the slice (first parameter).
 Example:
 ```
@@ -131,15 +232,39 @@ LastIndexBool
 
 LastIndexInt
 
+LastIndexInt8
+
+LastIndexInt16
+
+LastIndexInt32
+
+LastIndexInt64
+
+LastIndexUint
+
+LastIndexUint8
+
+LastIndexUint16
+
+LastIndexUint32
+
+LastIndexUint64
+
+LastIndexUintptr
+
 LastIndexFloat32
 
 LastIndexFloat64
 
 LastIndexString
 
+LastIndexComplex64
+
+LastIndexComplex128
+
 ---
 
-#### Replace
+### Replace
 Replaces the first instance of the old item (second parameter) within the slice (first parameter) with the new item (third parameter) and returns the new slice.
 Example:
 ```
@@ -153,15 +278,39 @@ ReplaceBool
 
 ReplaceInt
 
+ReplaceInt8
+
+ReplaceInt16
+
+ReplaceInt32
+
+ReplaceInt64
+
+ReplaceUint
+
+ReplaceUint8
+
+ReplaceUint16
+
+ReplaceUint32
+
+ReplaceUint64
+
+ReplaceUintptr
+
 ReplaceFloat32
 
 ReplaceFloat64
 
 ReplaceString
 
+ReplaceComplex64
+
+ReplaceComplex128
+
 ---
 
-#### ReplaceAll
+### ReplaceAll
 Replaces every instance of the old item (second parameter) within the slice (first parameter) with the new item (third parameter) and returns the new slice.
 Example:
 ```
@@ -175,8 +324,32 @@ ReplaceAllBool
 
 ReplaceAllInt
 
+ReplaceAllInt8
+
+ReplaceAllInt16
+
+ReplaceAllInt32
+
+ReplaceAllInt64
+
+ReplaceAllUint
+
+ReplaceAllUint8
+
+ReplaceAllUint16
+
+ReplaceAllUint32
+
+ReplaceAllUint64
+
+ReplaceAllUintptr
+
 ReplaceAllFloat32
 
 ReplaceAllFloat64
 
 ReplaceAllString
+
+ReplaceAllComplex64
+
+ReplaceAllComplex128
