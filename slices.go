@@ -52,6 +52,13 @@ func ReplaceByte(slice []byte, old, new byte) []byte {
 	return slice
 }
 
+func MapByte(slice []byte, f func(byte) byte) []byte {
+	for _, item := range slice {
+		ReplaceByte(slice, item, f(item))
+	}
+	return slice
+}
+
 func ReplaceAllByte(slice []byte, old, new byte) []byte {
 	for index, item := range slice {
 		if item == old {
@@ -109,6 +116,13 @@ func ReplaceBool(slice []bool, old, new bool) []bool {
 			slice[index] = new
 			return slice
 		}
+	}
+	return slice
+}
+
+func MapBool(slice []bool, f func(bool) bool) []bool {
+	for _, item := range slice {
+		ReplaceBool(slice, item, f(item))
 	}
 	return slice
 }
@@ -174,6 +188,13 @@ func ReplaceInt(slice []int, old, new int) []int {
 	return slice
 }
 
+func MapInt(slice []int, f func(int) int) []int {
+	for _, item := range slice {
+		ReplaceInt(slice, item, f(item))
+	}
+	return slice
+}
+
 func ReplaceAllInt(slice []int, old, new int) []int {
 	for index, item := range slice {
 		if item == old {
@@ -231,6 +252,13 @@ func ReplaceInt8(slice []int8, old, new int8) []int8 {
 			slice[index] = new
 			return slice
 		}
+	}
+	return slice
+}
+
+func MapInt8(slice []int8, f func(int8) int8) []int8 {
+	for _, item := range slice {
+		ReplaceInt8(slice, item, f(item))
 	}
 	return slice
 }
@@ -296,6 +324,13 @@ func ReplaceInt16(slice []int16, old, new int16) []int16 {
 	return slice
 }
 
+func MapInt16(slice []int16, f func(int16) int16) []int16 {
+	for _, item := range slice {
+		ReplaceInt16(slice, item, f(item))
+	}
+	return slice
+}
+
 func ReplaceAllInt16(slice []int16, old, new int16) []int16 {
 	for index, item := range slice {
 		if item == old {
@@ -353,6 +388,13 @@ func ReplaceInt32(slice []int32, old, new int32) []int32 {
 			slice[index] = new
 			return slice
 		}
+	}
+	return slice
+}
+
+func MapInt32(slice []int32, f func(int32) int32) []int32 {
+	for _, item := range slice {
+		ReplaceInt32(slice, item, f(item))
 	}
 	return slice
 }
@@ -418,6 +460,13 @@ func ReplaceInt64(slice []int64, old, new int64) []int64 {
 	return slice
 }
 
+func MapInt64(slice []int64, f func(int64) int64) []int64 {
+	for _, item := range slice {
+		ReplaceInt64(slice, item, f(item))
+	}
+	return slice
+}
+
 func ReplaceAllInt64(slice []int64, old, new int64) []int64 {
 	for index, item := range slice {
 		if item == old {
@@ -475,6 +524,13 @@ func ReplaceFloat32(slice []float32, old, new float32) []float32 {
 			slice[index] = new
 			return slice
 		}
+	}
+	return slice
+}
+
+func MapFloat32(slice []float32, f func(float32) float32) []float32 {
+	for _, item := range slice {
+		ReplaceFloat32(slice, item, f(item))
 	}
 	return slice
 }
@@ -540,6 +596,13 @@ func ReplaceFloat64(slice []float64, old, new float64) []float64 {
 	return slice
 }
 
+func MapFloat64(slice []float64, f func(float64) float64) []float64 {
+	for _, item := range slice {
+		ReplaceFloat64(slice, item, f(item))
+	}
+	return slice
+}
+
 func ReplaceAllFloat64(slice []float64, old, new float64) []float64 {
 	for index, item := range slice {
 		if item == old {
@@ -597,6 +660,13 @@ func ReplaceString(slice []string, old, new string) []string {
 			slice[index] = new
 			return slice
 		}
+	}
+	return slice
+}
+
+func MapString(slice []string, f func(string) string) []string {
+	for _, item := range slice {
+		ReplaceString(slice, item, f(item))
 	}
 	return slice
 }
@@ -662,6 +732,13 @@ func ReplaceUint(slice []uint, old, new uint) []uint {
 	return slice
 }
 
+func MapUint(slice []uint, f func(uint) uint) []uint {
+	for _, item := range slice {
+		ReplaceUint(slice, item, f(item))
+	}
+	return slice
+}
+
 func ReplaceAllUint(slice []uint, old, new uint) []uint {
 	for index, item := range slice {
 		if item == old {
@@ -719,6 +796,13 @@ func ReplaceUint8(slice []uint8, old, new uint8) []uint8 {
 			slice[index] = new
 			return slice
 		}
+	}
+	return slice
+}
+
+func MapUint8(slice []uint8, f func(uint8) uint8) []uint8 {
+	for _, item := range slice {
+		ReplaceUint8(slice, item, f(item))
 	}
 	return slice
 }
@@ -784,6 +868,13 @@ func ReplaceUint16(slice []uint16, old, new uint16) []uint16 {
 	return slice
 }
 
+func MapUint16(slice []uint16, f func(uint16) uint16) []uint16 {
+	for _, item := range slice {
+		ReplaceUint16(slice, item, f(item))
+	}
+	return slice
+}
+
 func ReplaceAllUint16(slice []uint16, old, new uint16) []uint16 {
 	for index, item := range slice {
 		if item == old {
@@ -841,6 +932,13 @@ func ReplaceUint32(slice []uint32, old, new uint32) []uint32 {
 			slice[index] = new
 			return slice
 		}
+	}
+	return slice
+}
+
+func MapUint32(slice []uint32, f func(uint32) uint32) []uint32 {
+	for _, item := range slice {
+		ReplaceUint32(slice, item, f(item))
 	}
 	return slice
 }
@@ -906,6 +1004,13 @@ func ReplaceUint64(slice []uint64, old, new uint64) []uint64 {
 	return slice
 }
 
+func MapUint64(slice []uint64, f func(uint64) uint64) []uint64 {
+	for _, item := range slice {
+		ReplaceUint64(slice, item, f(item))
+	}
+	return slice
+}
+
 func ReplaceAllUint64(slice []uint64, old, new uint64) []uint64 {
 	for index, item := range slice {
 		if item == old {
@@ -963,6 +1068,13 @@ func ReplaceUintptr(slice []uintptr, old, new uintptr) []uintptr {
 			slice[index] = new
 			return slice
 		}
+	}
+	return slice
+}
+
+func MapUintptr(slice []uintptr, f func(uintptr) uintptr) []uintptr {
+	for _, item := range slice {
+		ReplaceUintptr(slice, item, f(item))
 	}
 	return slice
 }
@@ -1028,6 +1140,13 @@ func ReplaceComplex64(slice []complex64, old, new complex64) []complex64 {
 	return slice
 }
 
+func MapComplex64(slice []complex64, f func(complex64) complex64) []complex64 {
+	for _, item := range slice {
+		ReplaceComplex64(slice, item, f(item))
+	}
+	return slice
+}
+
 func ReplaceAllComplex64(slice []complex64, old, new complex64) []complex64 {
 	for index, item := range slice {
 		if item == old {
@@ -1085,6 +1204,13 @@ func ReplaceComplex128(slice []complex128, old, new complex128) []complex128 {
 			slice[index] = new
 			return slice
 		}
+	}
+	return slice
+}
+
+func MapComplex128(slice []complex128, f func(complex128) complex128) []complex128 {
+	for _, item := range slice {
+		ReplaceComplex128(slice, item, f(item))
 	}
 	return slice
 }
