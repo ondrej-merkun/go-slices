@@ -2,7 +2,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/merkur0/go-slices)](https://goreportcard.com/report/github.com/merkur0/go-slices)
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20library%20that%20makes%20your%20life%20easier%20when%20working%20with%20slices%20in%20Go!&url=https://github.com/merkur0/go-slices)
 
-Unlike many other programming lanugages, Go doesn't provide helper functions for slices in it's core. I felt like this was quite an essential feature and there weren't any libraries out there that would do this, so I made my own. The functions are the same as the in the Go's official "strings" package, but you can use them on slices.
+Unlike many other programming languages, Go doesn't provide helper functions for slices in it's core. I felt like this was quite an essential feature and there weren't any libraries out there that would do this, so I made my own. The functions are the same as the in the Go's official "strings" package, but you can use them on slices.
 
 
 ## How to install
