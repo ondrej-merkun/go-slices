@@ -11,7 +11,7 @@ Open your terminal and type:
 go get github.com/merkur0/go-slices
 ```
 Then, import this package in your .go file like this:
-```
+```go
 import (
   "github.com/merkur0/go-slices"
 )
@@ -19,12 +19,12 @@ import (
 And that's it!
 
 ## Usage:
-```
+```go
 slices.FunctionName(parameters)
 ```  
   
 Example:
-```
+```go
 mySlice := []int{1, 2, 3}
 slices.ContainsInt(mySlice, 3) // Returns "true"
 ```
@@ -35,7 +35,7 @@ slices.ContainsInt(mySlice, 3) // Returns "true"
 ### Contains
 Returns true if the slice contains the item and false if it doesn't.
 Example:
-```
+```go
 mySlice := []float32{1.1, 1.2, 1.3, 1.4, 1.5}
 slices.ContainsFloat32(myArr, 1.2) // returns true
 slices.ContainsFloat32(myArr, 2.3) // returns false
@@ -46,7 +46,7 @@ slices.ContainsFloat32(myArr, 2.3) // returns false
 ### Count
 Returns the number of instances of the item within the slice.
 Example:
-```
+```go
 mySlice := []int{1, 1, 1, 2, 1}
 slices.CountInt(mySlice, 1) // returns 4
 slices.CountInt(mySlice, 3) // returns 0
@@ -57,7 +57,7 @@ slices.CountInt(mySlice, 3) // returns 0
 ### Delete
 Returns a copy of the slice where the item with the index (second parameter) is deleted.
 Example:
-```
+```go
 mySlice := []int{1, 2, 3, 4, 5}
 slices.DeleteInt(mySlice, 0) // returns [2, 3, 4, 5]
 ```
@@ -67,7 +67,7 @@ slices.DeleteInt(mySlice, 0) // returns [2, 3, 4, 5]
 ### Index
 Returns the index of the first instance of the second parameter in the slice, or -1 if item is not present in the slice.
 Example:
-```
+```go
 mySlice := []int{4, 1, 5}
 slices.IndexInt(mySlice, 5) // returns 2
 ```
@@ -77,7 +77,7 @@ slices.IndexInt(mySlice, 5) // returns 2
 ### LastIndex
 Returns the index of the last instance of the second parameter in the slice, or -1 if item is not present in the slice.
 Example:
-```
+```go
 mySlice := []int{1, 2, 1, 1, 4}
 slices.LastIndexInt(mySlice, 1) // returns 3
 ```
@@ -87,7 +87,7 @@ slices.LastIndexInt(mySlice, 1) // returns 3
 ### Map
 Returns a copy of the slice with all its items modified according to the mapping function.
 Example:
-```
+```go
 myFunc := func(number int) int {
     return number * 2
 }
@@ -101,7 +101,7 @@ slices.MapInt(mySlice, myFunc) // returns [2, 4, 6, 8]
 ### Pop
 Returns a copy of the slice with it's last item removed.
 Example:
-```
+```go
 mySlice := []int{1, 2, 3, 4}
 slices.PopInt(mySlice) // returns [1, 2, 3]
 ```
@@ -111,7 +111,7 @@ slices.PopInt(mySlice) // returns [1, 2, 3]
 ### Replace
 Returns a copy of the slice where the first instance of the old item (second parameter) is replaced with the new item (third parameter).
 Example:
-```
+```go
 mySlice := []int{1, 1, 3, 5, 1}
 slices.ReplaceInt(mySlice, 1, 0) // returns [0, 1, 3, 5, 1]
 ```
@@ -121,7 +121,7 @@ slices.ReplaceInt(mySlice, 1, 0) // returns [0, 1, 3, 5, 1]
 ### ReplaceAll
 Returns a copy of the slice where every instance of the old item (second parameter) is replaced with the new item (third parameter) and returns the new slice.
 Example:
-```
+```go
 mySlice := []int{1, 1, 3, 5, 1}
 slices.ReplaceAllInt(mySlice, 1, 0) // returns [0, 0, 3, 5, 1]
 ```
@@ -132,7 +132,7 @@ slices.ReplaceAllInt(mySlice, 1, 0) // returns [0, 0, 3, 5, 1]
 ### Shift
 Returns a copy of the slice with it's first item removed.
 Example:
-```
+```go
 mySlice := []int{1, 2, 3}
 slices.ShiftInt(mySlice) // returns [2, 3]
 ```
