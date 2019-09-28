@@ -246,6 +246,26 @@ func ShiftInt(slice []int) []int {
 	return slice[1:]
 }
 
+func MaxInt(slice []int) int {
+	max := slice[0]
+	for _, item := range slice {
+		if item > max {
+			max = item
+		}
+	}
+	return max
+}
+
+func MinInt(slice []int) int {
+	min := slice[0]
+	for _, item := range slice {
+		if item < min {
+			min = item
+		}
+	}
+	return max
+}
+
 func ContainsInt8(slice []int8, n int8) bool {
 	for _, item := range slice {
 		if item == n {
@@ -326,6 +346,26 @@ func ReplaceAllInt8(slice []int8, old, new int8) []int8 {
 
 func ShiftInt8(slice []int8) []int8 {
 	return slice[1:]
+}
+
+func MaxInt8(slice []int8) int8 {
+	max := slice[0]
+	for _, item := range slice {
+		if item > max {
+			max = item
+		}
+	}
+	return max
+}
+
+func MinInt8(slice []int8) int8 {
+	min := slice[0]
+	for _, item := range slice {
+		if item < min {
+			min = item
+		}
+	}
+	return max
 }
 
 func ContainsInt16(slice []int16, n int16) bool {
@@ -410,6 +450,26 @@ func ShiftInt16(slice []int16) []int16 {
 	return slice[1:]
 }
 
+func MaxInt16(slice []int16) int16 {
+	max := slice[0]
+	for _, item := range slice {
+		if item > max {
+			max = item
+		}
+	}
+	return max
+}
+
+func MinInt16(slice []int16) int16 {
+	min := slice[0]
+	for _, item := range slice {
+		if item < min {
+			min = item
+		}
+	}
+	return max
+}
+
 func ContainsInt32(slice []int32, n int32) bool {
 	for _, item := range slice {
 		if item == n {
@@ -490,6 +550,26 @@ func ReplaceAllInt32(slice []int32, old, new int32) []int32 {
 
 func ShiftInt32(slice []int32) []int32 {
 	return slice[1:]
+}
+
+func MaxInt32(slice []int32) int32 {
+	max := slice[0]
+	for _, item := range slice {
+		if item > max {
+			max = item
+		}
+	}
+	return max
+}
+
+func MinInt32(slice []int32) int32 {
+	min := slice[0]
+	for _, item := range slice {
+		if item < min {
+			min = item
+		}
+	}
+	return max
 }
 
 func ContainsInt64(slice []int64, n int64) bool {
@@ -574,6 +654,26 @@ func ShiftInt64(slice []int64) []int64 {
 	return slice[1:]
 }
 
+func MaxInt64(slice []int64) int64 {
+	max := slice[0]
+	for _, item := range slice {
+		if item > max {
+			max = item
+		}
+	}
+	return max
+}
+
+func MinInt64(slice []int64) int64 {
+	min := slice[0]
+	for _, item := range slice {
+		if item < min {
+			min = item
+		}
+	}
+	return max
+}
+
 func ContainsFloat32(slice []float32, n float32) bool {
 	for _, item := range slice {
 		if item == n {
@@ -654,6 +754,26 @@ func ReplaceAllFloat32(slice []float32, old, new float32) []float32 {
 
 func ShiftFloat32(slice []float32) []float32 {
 	return slice[1:]
+}
+
+func MaxFloat32(slice []float32) float32 {
+	max := slice[0]
+	for _, item := range slice {
+		if item > max {
+			max = item
+		}
+	}
+	return max
+}
+
+func MinFloat32(slice []float32) float32 {
+	min := slice[0]
+	for _, item := range slice {
+		if item < min {
+			min = item
+		}
+	}
+	return max
 }
 
 func ContainsFloat64(slice []float64, n float64) bool {
@@ -738,6 +858,26 @@ func ShiftFloat64(slice []float64) []float64 {
 	return slice[1:]
 }
 
+func MaxFloat64(slice []float64) float64 {
+	max := slice[0]
+	for _, item := range slice {
+		if item > max {
+			max = item
+		}
+	}
+	return max
+}
+
+func MinFloat64(slice []float64) float64 {
+	min := slice[0]
+	for _, item := range slice {
+		if item < min {
+			min = item
+		}
+	}
+	return max
+}
+
 func ContainsString(slice []string, n string) bool {
 	for _, item := range slice {
 		if item == n {
@@ -818,6 +958,26 @@ func ReplaceAllString(slice []string, old, new string) []string {
 
 func ShiftString(slice []string) []string {
 	return slice[1:]
+}
+
+func MaxString(slice []string) string {
+	max := slice[0]
+	for _, item := range slice {
+		if item > max {
+			max = item
+		}
+	}
+	return max
+}
+
+func MinString(slice []string) string {
+	min := slice[0]
+	for _, item := range slice {
+		if item < min {
+			min = item
+		}
+	}
+	return max
 }
 
 func ContainsUint(slice []uint, n uint) bool {
@@ -902,6 +1062,26 @@ func ShiftUint(slice []uint) []uint {
 	return slice[1:]
 }
 
+func MaxUint(slice []uint) uint {
+	max := slice[0]
+	for _, item := range slice {
+		if item > max {
+			max = item
+		}
+	}
+	return max
+}
+
+func MinUint(slice []uint) uint {
+	min := slice[0]
+	for _, item := range slice {
+		if item < min {
+			min = item
+		}
+	}
+	return max
+}
+
 func ContainsUint8(slice []uint8, n uint8) bool {
 	for _, item := range slice {
 		if item == n {
@@ -982,6 +1162,26 @@ func ReplaceAllUint8(slice []uint8, old, new uint8) []uint8 {
 
 func ShiftUint8(slice []uint8) []uint8 {
 	return slice[1:]
+}
+
+func MaxUint8(slice []uint8) uint8 {
+	max := slice[0]
+	for _, item := range slice {
+		if item > max {
+			max = item
+		}
+	}
+	return max
+}
+
+func MinUint8(slice []uint8) uint8 {
+	min := slice[0]
+	for _, item := range slice {
+		if item < min {
+			min = item
+		}
+	}
+	return max
 }
 
 func ContainsUint16(slice []uint16, n uint16) bool {
@@ -1066,6 +1266,26 @@ func ShiftUint16(slice []uint16) []uint16 {
 	return slice[1:]
 }
 
+func MaxUint16(slice []uint16) uint16 {
+	max := slice[0]
+	for _, item := range slice {
+		if item > max {
+			max = item
+		}
+	}
+	return max
+}
+
+func MinUint16(slice []uint16) uint16 {
+	min := slice[0]
+	for _, item := range slice {
+		if item < min {
+			min = item
+		}
+	}
+	return max
+}
+
 func ContainsUint32(slice []uint32, n uint32) bool {
 	for _, item := range slice {
 		if item == n {
@@ -1148,6 +1368,26 @@ func ShiftUint32(slice []uint32) []uint32 {
 	return slice[1:]
 }
 
+func MaxUint32(slice []uint32) uint32 {
+	max := slice[0]
+	for _, item := range slice {
+		if item > max {
+			max = item
+		}
+	}
+	return max
+}
+
+func MinUint32(slice []uint32) uint32 {
+	min := slice[0]
+	for _, item := range slice {
+		if item < min {
+			min = item
+		}
+	}
+	return max
+}
+
 func ContainsUint64(slice []uint64, n uint64) bool {
 	for _, item := range slice {
 		if item == n {
@@ -1228,6 +1468,26 @@ func ReplaceAllUint64(slice []uint64, old, new uint64) []uint64 {
 
 func ShiftUint64(slice []uint64) []uint64 {
 	return slice[1:]
+}
+
+func MaxUint64(slice []uint64) uint64 {
+	max := slice[0]
+	for _, item := range slice {
+		if item > max {
+			max = item
+		}
+	}
+	return max
+}
+
+func MinUint64(slice []uint64) uint64 {
+	min := slice[0]
+	for _, item := range slice {
+		if item < min {
+			min = item
+		}
+	}
+	return max
 }
 
 func ContainsUintptr(slice []uintptr, n uintptr) bool {
