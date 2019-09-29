@@ -263,7 +263,7 @@ func MinInt(slice []int) int {
 			min = item
 		}
 	}
-	return max
+	return min
 }
 
 func ContainsInt8(slice []int8, n int8) bool {
@@ -365,7 +365,7 @@ func MinInt8(slice []int8) int8 {
 			min = item
 		}
 	}
-	return max
+	return min
 }
 
 func ContainsInt16(slice []int16, n int16) bool {
@@ -467,7 +467,7 @@ func MinInt16(slice []int16) int16 {
 			min = item
 		}
 	}
-	return max
+	return min
 }
 
 func ContainsInt32(slice []int32, n int32) bool {
@@ -569,7 +569,7 @@ func MinInt32(slice []int32) int32 {
 			min = item
 		}
 	}
-	return max
+	return min
 }
 
 func ContainsInt64(slice []int64, n int64) bool {
@@ -671,7 +671,7 @@ func MinInt64(slice []int64) int64 {
 			min = item
 		}
 	}
-	return max
+	return min
 }
 
 func ContainsFloat32(slice []float32, n float32) bool {
@@ -773,7 +773,7 @@ func MinFloat32(slice []float32) float32 {
 			min = item
 		}
 	}
-	return max
+	return min
 }
 
 func ContainsFloat64(slice []float64, n float64) bool {
@@ -875,7 +875,7 @@ func MinFloat64(slice []float64) float64 {
 			min = item
 		}
 	}
-	return max
+	return min
 }
 
 func ContainsString(slice []string, n string) bool {
@@ -977,7 +977,7 @@ func MinString(slice []string) string {
 			min = item
 		}
 	}
-	return max
+	return min
 }
 
 func ContainsUint(slice []uint, n uint) bool {
@@ -1079,7 +1079,7 @@ func MinUint(slice []uint) uint {
 			min = item
 		}
 	}
-	return max
+	return min
 }
 
 func ContainsUint8(slice []uint8, n uint8) bool {
@@ -1181,7 +1181,7 @@ func MinUint8(slice []uint8) uint8 {
 			min = item
 		}
 	}
-	return max
+	return min
 }
 
 func ContainsUint16(slice []uint16, n uint16) bool {
@@ -1283,7 +1283,7 @@ func MinUint16(slice []uint16) uint16 {
 			min = item
 		}
 	}
-	return max
+	return min
 }
 
 func ContainsUint32(slice []uint32, n uint32) bool {
@@ -1385,7 +1385,7 @@ func MinUint32(slice []uint32) uint32 {
 			min = item
 		}
 	}
-	return max
+	return min
 }
 
 func ContainsUint64(slice []uint64, n uint64) bool {
@@ -1487,7 +1487,7 @@ func MinUint64(slice []uint64) uint64 {
 			min = item
 		}
 	}
-	return max
+	return min
 }
 
 func ContainsUintptr(slice []uintptr, n uintptr) bool {
