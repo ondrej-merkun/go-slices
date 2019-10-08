@@ -98,6 +98,28 @@ slices.MapInt(mySlice, myFunc) // returns [2, 4, 6, 8]
 
 ---
 
+### Max
+Returns the largest element in the slice.
+Example:
+```go
+mySlice := []int{1, 2, 3, 4}
+
+slices.MaxInt(mySlice) // returns 4
+```
+
+---
+
+### Min
+Returns the smallest element in the slice.
+Example:
+```go
+mySlice := []int{1, 2, 3, 4}
+
+slices.MinInt(mySlice) // returns 1
+```
+
+---
+
 ### Pop
 Returns a copy of the slice with it's last item removed.
 Example:
