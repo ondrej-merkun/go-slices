@@ -115,7 +115,7 @@ Example:
 ```go
 mySlice := []int{1, 2, 3, 4}
 
-slices.MaxInt(mySlice) // returns 1
+slices.MixInt(mySlice) // returns 1
 ```
 
 ---
