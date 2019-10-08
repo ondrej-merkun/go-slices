@@ -1,0 +1,24 @@
+{
+  "name": "@ondrej-merkun/go-slices",
+  "version": "1.0.0",
+  "description": "A collection of helper functions for easier manipulation of slices of all types in Go",
+  "main": "slices.go",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ondrej-merkun/go-slices.git"
+  },
+  "keywords": [
+    "go",
+    "slices",
+    "slice"
+  ],
+  "author": "Ondřej Merkun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ondrej-merkun/go-slices/issues"
+  },
+  "homepage": "https://github.com/ondrej-merkun/go-slices#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
